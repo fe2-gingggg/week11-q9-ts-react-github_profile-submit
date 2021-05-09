@@ -1,14 +1,18 @@
-import {
-  ActionType,
-  AsyncActionCreatorBuilder,
-  getType,
-} from 'typesafe-actions'
+// import {
+//   ActionType,
+//   AsyncActionCreatorBuilder,
+//   getType,
+// } from 'typesafe-actions'
+import { ActionType, getType } from 'typesafe-actions'
 
-export type AsyncState<T, E = any> = {
-  loading: boolean
-  data: T | null
-  error: E | null
-}
+import { AnyAsyncActionCreator, AsyncState } from './types'
+
+// export type AsyncState<T, E = any> = {
+//   loading: boolean
+//   data: T | null
+//   error: E | null
+// }
+// lib/types.ts 로 이동
 
 export const asyncState = {
   initial: <T, E>(initialData?: T): AsyncState<T, E> => ({
@@ -40,7 +44,8 @@ export function transformToArray<AC extends AnyAsyncActionCreator>(
   return [request, success, failure]
 }
 
-type AnyAsyncActionCreator = AsyncActionCreatorBuilder<any, any, any>
+// type AnyAsyncActionCreator = AsyncActionCreatorBuilder<any, any, any>
+// lib/types.ts 로 이동
 export function createAsyncReducer<
   S,
   AC extends AnyAsyncActionCreator,

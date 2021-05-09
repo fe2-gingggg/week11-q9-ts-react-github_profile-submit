@@ -10,7 +10,11 @@ function GithubUsernameForm({ onSubmitUsername }: GithubUsernameFormProps) {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    onSubmitUsername(input)
+    if (input.trim()) {
+      onSubmitUsername(input)
+    } else {
+      setInput('')
+    }
   }
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {

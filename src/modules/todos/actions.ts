@@ -1,4 +1,5 @@
-import { deprecated, createAction } from 'typesafe-actions'
+// import { deprecated, createAction } from 'typesafe-actions'
+import { deprecated } from 'typesafe-actions'
 const { createStandardAction, createAction: createActionDep } = deprecated
 
 export const ADD_TODO = 'todos/ADD_TODO'

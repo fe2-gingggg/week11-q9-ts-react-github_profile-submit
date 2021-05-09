@@ -5,7 +5,6 @@ import GithubProfileLoader from './containers/GithubProfileLoader'
 function App() {
   return <GithubProfileLoader />
   // return <TodoApp />
-  // return <div>hi</div>
 }
 
 export default App

@@ -2,7 +2,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import GithubProfileInfo from '../components/GithubProfileInfo'
 import GithubUsernameForm from '../components/GithubUsernameForm'
 import { RootState } from '../modules'
-import { getUserProfileAsync, getUserProfileThunk } from '../modules/github'
+// import { getUserProfileAsync, getUserProfileThunk } from '../modules/github'
+import { getUserProfileAsync } from '../modules/github'
 
 function GithubProfileLoader() {
   const { data, loading, error } = useSelector(

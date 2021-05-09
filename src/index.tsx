@@ -6,12 +6,12 @@ import reportWebVitals from './reportWebVitals'
 import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer, { rootSaga } from './modules'
-import Thunk from 'redux-thunk'
+// import Thunk from 'redux-thunk'
 import createSagaMiddleware from 'redux-saga'
 
 const sagaMiddleware = createSagaMiddleware()
 
-// const store = createStore(rootReducer, applyMiddleware(Thunk))
+// const store = createStore(rootReducer, applyMiddleware(Thunk)) // thunk 사용시
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware))
 
 sagaMiddleware.run(rootSaga)

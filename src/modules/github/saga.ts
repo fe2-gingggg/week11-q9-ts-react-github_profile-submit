@@ -1,6 +1,8 @@
 import { getUserProfileAsync, GET_USER_PROFILE } from './actions'
-import { call, put, takeEvery } from 'redux-saga/effects'
-import { getUserProfile, GithubProfile } from '../../api/github'
+// import { call, put, takeEvery } from 'redux-saga/effects'
+import { takeEvery } from 'redux-saga/effects'
+// import { getUserProfile, GithubProfile } from '../../api/github'
+import { getUserProfile } from '../../api/github'
 import createAsyncSaga from '../../lib/createAsyncSaga'
 
 // function* getUserProfileSaga(
